@@ -14,8 +14,16 @@ namespace Test.Droid
 	public class CustomListActivity : Activity
 	{
 		ListView lv_vector, lv_raster;
-		List<VectorItem> ti_vector = new List<VectorItem> ();
-		List<RasterItem> ti_raster = new List<RasterItem> ();
+		List<VectorItem> ti_vector = new List<VectorItem> () {
+			new VectorItem () { MainText = "Vegetables", SubText = "65 items", Color = 0x800080 },
+			new VectorItem () { MainText = "Bulbs", SubText = "18 items", Checked = true, Color = 0xf0f8ff },
+			new VectorItem () { MainText = "Fruits", SubText = "17 items", Color = 0x794044 }
+		};
+		List<RasterItem> ti_raster = new List<RasterItem> () {
+			new RasterItem () { MainText = "Tubers", SubText = "43 items" },
+			new RasterItem () { MainText = "Flower Buds", SubText = "5 items", Checked = true },
+			new RasterItem () { MainText = "Legumes", SubText = "33 items" }
+		};
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -27,14 +35,6 @@ namespace Test.Droid
 			SetContentView (Resource.Layout.LV_1);
 			lv_vector = FindViewById<ListView> (Resource.Id.List_Vector);
 			lv_raster = FindViewById<ListView> (Resource.Id.List_Raster);
-
-			ti_vector.Add (new VectorItem () { MainText = "Vegetables", SubText = "65 items" });
-			ti_vector.Add (new VectorItem () { MainText = "Fruits", SubText = "17 items" });
-			ti_vector.Add (new VectorItem () { MainText = "Bulbs", SubText = "18 items", Checked = true });
-
-			ti_raster.Add (new RasterItem () { MainText = "Tubers", SubText = "43 items" });
-			ti_raster.Add (new RasterItem () { MainText = "Flower Buds", SubText = "5 items", Checked = true });
-			ti_raster.Add (new RasterItem () { MainText = "Legumes", SubText = "33 items" });
 
 			lv_vector.Adapter = new VectorAdapter (this, ti_vector);
 			lv_vector.ItemClick += OnVectorListItemClick;
@@ -121,11 +121,13 @@ namespace Test.Droid
 			view.FindViewById<TextView> (Resource.Id.Text2).Text = item.SubText;
 			view.FindViewById<ImageView> (Resource.Id.Image).SetImageResource (Resource.Drawable.vector);
 			view.FindViewById<CheckBox> (Resource.Id.Check).Checked = item.Checked;
-
+				
 			var spinner = view.FindViewById<Spinner> (Resource.Id.ColorSpinner);
 			// spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (spinner_ItemSelected);
 			var adapter = new ColorSpinnerAdapter (this.context.Resources.GetStringArray (Resource.Array.colors_array), this.context);
 			spinner.Adapter = adapter;
+			var pos = adapter.GetPosition (item.Color);
+			spinner.SetSelection (pos);
 			return view;
 		}
 
@@ -183,6 +185,20 @@ namespace Test.Droid
 	{
 		string[] items;
 		Context context;
+
+		public int GetPosition (int color)
+		{
+			var c = new Color (color);
+			string hex = string.Format ("#{0:X2}{1:X2}{2:X2}", c.R, c.G, c.B).ToLower();
+			int ret = 0;
+			for (int i = 0; i < items.Length; i++) {
+				if (hex == items [i]) {
+					ret = i;
+					break;
+				}
+			}
+			return ret;
+		}
 
 		public override int Count {
 			get {
