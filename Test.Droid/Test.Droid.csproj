@@ -57,7 +57,10 @@
     <AndroidResource Include="Resources\layout\LV_1.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\LV_CustomRow_1.axml">
+    <AndroidResource Include="Resources\layout\LvVectorRow.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LvRasterRow.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -122,11 +122,11 @@ namespace Test.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f07000a
-			public const int Check = 2131165194;
-			
 			// aapt resource value: 0x7f070009
-			public const int ColorSpinner = 2131165193;
+			public const int Check = 2131165193;
+			
+			// aapt resource value: 0x7f07000a
+			public const int ColorSpinner = 2131165194;
 			
 			// aapt resource value: 0x7f070000
 			public const int Heading1 = 2131165184;
@@ -172,7 +172,10 @@ namespace Test.Droid
 			public const int LV_1 = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int LV_CustomRow_1 = 2130903041;
+			public const int LvRasterRow = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int LvVectorRow = 2130903042;
 			
 			static Layout()
 			{

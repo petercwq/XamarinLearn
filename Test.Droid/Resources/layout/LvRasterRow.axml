@@ -37,11 +37,6 @@
             android:layout_height="36dp"
             android:padding="5dp"
             android:src="@drawable/icon" />
-        <Spinner
-            android:id="@+id/ColorSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp" />
         <CheckBox
             android:id="@+id/Check"
             android:layout_width="wrap_content"
