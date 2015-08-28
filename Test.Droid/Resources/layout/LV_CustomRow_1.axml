@@ -33,8 +33,8 @@
         android:layout_alignParentRight="true">
         <ImageView
             android:id="@+id/Image"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:padding="5dp"
             android:src="@drawable/icon" />
         <Spinner
@@ -45,7 +45,7 @@
         <CheckBox
             android:id="@+id/Check"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="36dp"
             android:padding="5dp" />
     </LinearLayout>
 </RelativeLayout>

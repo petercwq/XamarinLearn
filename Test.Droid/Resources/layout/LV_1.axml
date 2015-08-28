@@ -4,8 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <TextView
-        android:id="@+id/Heading"
-        android:text="Vegetable Groups"
+        android:id="@+id/Heading1"
+        android:text="@string/vector_layers"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#00000000"
@@ -14,8 +14,23 @@
         android:textStyle="bold"
         android:padding="5dp" />
     <ListView
-        android:id="@+id/List"
+        android:id="@+id/List_Vector"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#FFDAFF7F" />
+    <TextView
+        android:id="@+id/Heading2"
+        android:text="@string/base_layers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:textSize="30dp"
+        android:textColor="#FF267F00"
+        android:textStyle="bold"
+        android:padding="5dp" />
+    <ListView
+        android:id="@+id/List_Raster"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:cacheColorHint="#FFDAFF7F" />
 </LinearLayout>

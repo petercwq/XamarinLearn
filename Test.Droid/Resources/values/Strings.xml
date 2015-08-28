@@ -2,6 +2,9 @@
 <resources>
     <string name="ApplicationName">Test.Droid</string>
     <string name="color_prompt">Choose a color</string>
+    <string name="layers">Layers</string>
+    <string name="vector_layers">Vector Layers</string>
+    <string name="base_layers">Base Layers</string>
     <string-array name="colors_array">
       <item>#000000</item>
       <item>#ffffff</item>
