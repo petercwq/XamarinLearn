@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Test.Droid/Test.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Test.Droid/CustomListActivity.cs">
+    <Files>
+      <File FileName="Test.Droid/CustomListActivity.cs" Line="200" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Test.Droid/CustomListActivity.cs" line="192" offsetX="863" offsetY="2865" expression="hex" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.Test.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
